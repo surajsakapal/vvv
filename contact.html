@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Card Layout */
+        .contact-card {
+            display: flex;
+            flex-direction: row;
+            /* Make layout horizontal */
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            max-width: 1200px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+       
+
+        /* Left Column - Contact Info */
+        .info-section {
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 40px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            align-items:center;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .info-item .title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .info-item .content {
+            font-size: 0.9rem;
+        }
+
+        /* Right Column - Form Section */
+        .form-section {
+            padding: 40px;
+            flex: 1.5;
+        }
+
+        .form-section h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #00bcd4;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: 0.3s;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #00bcd4;
+            box-shadow: 0 0 5px rgba(0, 188, 212, 0.4);
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .Btn {
+            padding: 12px;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .Btn:hover {
+            background-color: #0097a7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-card {
+                flex-direction: column;
+                /* Stack vertically for smaller screens */
+            }
+
+            .info-section,
+            .form-section {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">VVV</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="contact-card">
+            <!-- Left Column: Contact Info -->
+            <div class="info-section">
+                <div class="info-item">
+                    <i>🏥</i>
+                    <div class="title">VVVV</div>
+                    <div class="content">AT NALASOPARA</div>
+                </div>
+                <div class="info-item">
+                    <i>📞</i>
+                    <div class="title">Call Us</div>
+                    <div class="content">+91 000000000</div>
+                </div>
+                <div class="info-item">
+                    <i>✉️</i>
+                    <div class="title">Email Us</div>
+                    <div class="content">example@gmail.com</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h1>Contact Us</h1>
+                <form action="contact.php" method="POST">
+                    <div class="form-group">
+                        <i>👤</i>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <i>📧</i>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i>📞</i>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <i>💬</i>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="Btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div>
+                <h3>Company Logo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3>Contact Info</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Main Street, City, Country</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <!-- Map -->
+            <div class="map">
+                <h3>Our Location</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345095435!2d144.9537363153189!3d-37.816279779751894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e7b0cba41de6!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1695412694462!5m2!1sen!2sau"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

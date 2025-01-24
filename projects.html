@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-color: skyblue;
+            background-size: cover;
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+
+        .bg-text {
+            color: white;
+            text-align: center;
+            padding: 2em;
+            max-width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            float:left;
+        }
+
+        .bg-text h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+
+        .bg-text p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+
+        .bg-text a {
+            background-color: #20b1b4;
+            color: white;
+            padding: 0.75em 2em;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .bg-text a:hover {
+            background-color: #3498db;
+        }
+
+        .bg-image img {
+            width: 50%;
+            height: auto;
+            float: right;
+            margin-left:30rem;
+        }
+
+        /* Service Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+            padding: 2em;
+        }
+
+        .service-card {
+            position: relative;
+            width: 100%;
+            perspective: 1000px;
+        }
+
+        .service-card-inner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .service-card:hover .service-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .service-card-front,
+        .service-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .service-card-front {
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-card-back {
+            background: #3498db;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
+
+        .service-card-back h3 {
+            font-size: 1.8em;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-container {
+                padding: 1em;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">Lp Developers</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="bg-text">
+            <h2>Expert Mutual Fund Advisory for Smart Investing</h2>
+            <a href="#">Consult Now</a>
+            <p>Your Gateway to Trusted Professional Advice.</p>
+        </div>
+        <div class="bg-image">
+            <img src="images/cardimg.png" alt="">
+        </div>
+        
+    </div>
+
+    <div style="text-align: center; margin: 2em 0;">
+        <h2 style="font-size: 2.5em; font-weight: bold; color: #333; margin-bottom: 0.5em;">Empowering Your Vision with
+            Expert Insights.</h2>
+        <p style="font-size: 1.2em; color: #7f8c8d; margin: 0 1rem; text-align: justify;">
+            We connect you with leading consultants who are ready to provide expert advice and solutions tailored to
+            your needs—all from the comfort of your screen.
+        </p>
+    </div>
+
+    <div class="services-container">
+        <!-- Doctor -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buldingimg1.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 1</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lawyer -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buldingimg2.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 2</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Astrologer -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buldingimg3.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 3</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insurance Advisor -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buldingimg4.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 4</h3>
+                </div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buldingimg5.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 5</h3>
+                </div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buliding4.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 6</h3>
+                </div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buliding3.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 7</h3>
+                </div>
+            </div>
+        </div>
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buliding1.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 8</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mutual Fund Advisor -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buliding5.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 9</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interior Designer -->
+        <div class="service-card">
+            <div class="service-card-inner">
+                <div class="service-card-front">
+                    <img src="./images/buliding2.jpg" alt="">
+                </div>
+                <div class="service-card-back">
+                    <h3>text 10</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Description -->
+            <div>
+                <h3>Company Logo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3>Contact Info</h3>
+                <p>Email: contact@example.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Main Street, City, Country</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <!-- Map -->
+            <div class="map">
+                <h3>Our Location</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345095435!2d144.9537363153189!3d-37.816279779751894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577e7b0cba41de6!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1695412694462!5m2!1sen!2sau"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
